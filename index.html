@@ -10,17 +10,29 @@
     <title>Zixin Wang - Personal Website</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add Typed.js library for typing animation -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-content">
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#awards">Awards</a></li>
                 <li><a href="#service">Professional Service</a></li>
             </ul>
+            <!-- Add dark mode toggle -->
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
         </div>
     </nav>
 
@@ -29,14 +41,18 @@
             <div class="profile">
                 <img src="photo.jpg" alt="Zixin Wang" class="profile-img">
                 <h1>Zixin Wang</h1>
-                <p class="title">Postdoctoral Research Fellow</p>
+                <p class="title"><span id="typed-strings">
+                    <span>Postdoctoral Research Fellow</span>
+                    <span>Guest Lecturer</span>
+                </span>
+                <span id="typed"></span></p>
                 <p class="affiliation">CIRES, School of EECS, The University of Queensland, Australia</p>
                 <p class="bio">
-                    I am a Postdoctoral Research Fellow (supervised by Prof. Shazia Sadiq) at CIRES, The University of Queensland, Australia. My research focuses on 
+                    I am a Postdoctoral Research Fellow (supervised by Prof. <a href="https://scholar.google.com.au/citations?user=1Jo0EmIAAAAJ&hl=en" target="_blank">Shazia Sadiq</a>) at CIRES, The University of Queensland, Australia. My research focuses on 
                     domain adaptation, test-time adaptation for vision tasks, and vision-language models. I also have experience in 
                     graph neural networks (GNNs), molecular property prediction, and diffusion models.
                     <br><br>
-                    I was supervised by A/Prof. Sen Wang, Dr. Yadan Luo, and Prof. Helen Huang during PhD. I received my Master of IT from 
+                    I was supervised by A/Prof. <a href="https://scholar.google.com.au/citations?user=L6BLX7gAAAAJ&hl=en" target="_blank">Sen Wang</a>, Dr. <a href="https://luoyadan.github.io" target="_blank">Yadan Luo</a>, and Prof. <a href="https://scholar.google.com.au/citations?user=iAWMsgEAAAAJ&hl=en" target="_blank">Zi Huang</a> during PhD. I received my Master of IT from 
                     The University of Queensland in 2021.
                 </p>
                 <div class="social-links">
@@ -57,6 +73,15 @@
         </div>
     </section>
 
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div id="chart-wrapper" class="chart-container">
+                <canvas id="researchChart"></canvas>
+            </div>
+        </div>
+    </section>
+
     <section id="publications" class="section">
         <div class="container">
             <h2>Publications</h2>
@@ -64,37 +89,37 @@
                 <h3>2024</h3>
                 <div class="publication-item">
                     <h4>In Search of Lost Online Test-Time Adaptation: A Survey</h4>
-                    <p>IJCV 2024</p>
-                    <p><strong>Authors:</strong> <strong>Zixin Wang</strong>, Yadan Luo, Liang Zheng, Zhuoxiao Chen, Sen Wang, Zi Huang</p>
+                    <p>International Journal of Computer Vision (IJCV)</p>
+                    <p><strong>Authors:</strong> <strong>Zixin Wang</strong>, <a href="https://luoyadan.github.io" target="_blank">Yadan Luo</a>, Liang Zheng, Zhuoxiao Chen, <a href="https://scholar.google.com.au/citations?user=L6BLX7gAAAAJ&hl=en" target="_blank">Sen Wang</a>, <a href="https://scholar.google.com.au/citations?user=iAWMsgEAAAAJ&hl=en" target="_blank">Zi Huang</a></p>
                 </div>
                 <div class="publication-item">
                     <h4>DPO: Dual-Perturbation Optimization for Test-Time Adaptation in 3D Object Detection</h4>
                     <p>ACM Multimedia 2024</p>
-                    <p><strong>Authors:</strong> Zhuoxiao Chen*, <strong>Zixin Wang*</strong>, Yadan Luo, Sen Wang, Zi Huang</p>
+                    <p><strong>Authors:</strong> Zhuoxiao Chen*, <strong>Zixin Wang*</strong>, <a href="https://luoyadan.github.io" target="_blank">Yadan Luo</a>, <a href="https://scholar.google.com.au/citations?user=L6BLX7gAAAAJ&hl=en" target="_blank">Sen Wang</a>, <a href="https://scholar.google.com.au/citations?user=iAWMsgEAAAAJ&hl=en" target="_blank">Zi Huang</a></p>
                 </div>
 
                 <h3>2023</h3>
                 <div class="publication-item">
                     <h4>Cal-SFDA: Source-Free Domain-Adaptive Semantic Segmentation with Differentiable Expected Calibration Error</h4>
                     <p>ACM Multimedia 2023</p>
-                    <p><strong>Authors:</strong> <strong>Zixin Wang</strong>, Yadan Luo, Zhi Chen, Sen Wang, Zi Huang</p>
+                    <p><strong>Authors:</strong> <strong>Zixin Wang</strong>, <a href="https://luoyadan.github.io" target="_blank">Yadan Luo</a>, Zhi Chen, <a href="https://scholar.google.com.au/citations?user=L6BLX7gAAAAJ&hl=en" target="_blank">Sen Wang</a>, <a href="https://scholar.google.com.au/citations?user=iAWMsgEAAAAJ&hl=en" target="_blank">Zi Huang</a></p>
                 </div>
 
                 <h3>2022</h3>
                 <div class="publication-item">
                     <h4>Discovering Domain Disentanglement for Generalized Multi-Source Domain Adaptation</h4>
                     <p>ICME 2022</p>
-                    <p><strong>Authors:</strong> <strong>Zixin Wang</strong>, Yadan Luo, Peng-Fei Zhang, Sen Wang, Zi Huang</p>
+                    <p><strong>Authors:</strong> <strong>Zixin Wang</strong>, <a href="https://luoyadan.github.io" target="_blank">Yadan Luo</a>, Peng-Fei Zhang, <a href="https://scholar.google.com.au/citations?user=L6BLX7gAAAAJ&hl=en" target="_blank">Sen Wang</a>, <a href="https://scholar.google.com.au/citations?user=iAWMsgEAAAAJ&hl=en" target="_blank">Zi Huang</a></p>
                 </div>
-
+                
                 <!-- <h3>Under Review</h3>
                 <div class="publication-item">
                     <h4>Towards Open World Active Learning for 3D Object Detection</h4>
-                    <p><strong>Authors:</strong> Zhuoxiao Chen, Yadan Luo, Zixin Wang, Zijian Wang, Xin Yu, Zi Huang</p>
+                    <p><strong>Authors:</strong> Zhuoxiao Chen, <a href="https://luoyadan.github.io" target="_blank">Yadan Luo</a>, Zixin Wang, Zijian Wang, Xin Yu, <a href="https://scholar.google.com.au/citations?user=iAWMsgEAAAAJ&hl=en" target="_blank">Zi Huang</a></p>
                 </div>
                 <div class="publication-item">
                     <h4>Is Less More? Exploring Token Condensation as Training-Free Test-Time Adaptation</h4>
-                    <p><strong>Authors:</strong> Zixin Wang, Dong Gong, Sen Wang, Zi Huang, Yadan Luo</p>
+                    <p><strong>Authors:</strong> Zixin Wang, Dong Gong, <a href="https://scholar.google.com.au/citations?user=L6BLX7gAAAAJ&hl=en" target="_blank">Sen Wang</a>, <a href="https://scholar.google.com.au/citations?user=iAWMsgEAAAAJ&hl=en" target="_blank">Zi Huang</a>, <a href="https://luoyadan.github.io" target="_blank">Yadan Luo</a></p>
                 </div> -->
             </div>
         </div>
@@ -207,5 +232,95 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        var typed = new Typed('#typed', {
+            stringsElement: '#typed-strings',
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+
+        const researchChart = new Chart(document.getElementById('researchChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Domain Adaptation', 'Test-Time Adaptation', 'Computer Vision', '3D Object Detection', 'Vision-Language Models', 'Efficient Vision Transformers', 'Diffusion Models', 'GNNs'],
+                datasets: [{
+                    label: 'Research Areas',
+                    data: [25, 20, 15, 10, 10, 8, 7, 5],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)',
+                        'rgba(255, 159, 64, 0.7)',
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(255, 205, 86, 0.7)',
+                        'rgba(201, 203, 207, 0.7)',
+                        'rgba(54, 235, 162, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(255, 205, 86, 1)',
+                        'rgba(201, 203, 207, 1)',
+                        'rgba(54, 235, 162, 1)'
+                    ],
+                    borderWidth: 2,
+                    hoverOffset: 15
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        top: 20,
+                        bottom: 80,
+                        left: 20,
+                        right: 20
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        align: 'center',
+                        labels: {
+                            font: {
+                                family: "'Poppins', sans-serif",
+                                size: 14
+                            },
+                            padding: 15,
+                            boxWidth: 15,
+                            usePointStyle: true,
+                            pointStyle: 'circle'
+                        },
+                        maxHeight: 120,
+                        maxWidth: 500
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                        padding: 15,
+                        titleFont: {
+                            family: "'Poppins', sans-serif",
+                            size: 14
+                        },
+                        bodyFont: {
+                            family: "'Poppins', sans-serif",
+                            size: 13
+                        },
+                        displayColors: false
+                    }
+                },
+                animation: {
+                    animateScale: true,
+                    animateRotate: true,
+                    duration: 2000,
+                    easing: 'easeOutQuart'
+                }
+            }
+        });
+    </script>
 </body>
 </html>
